@@ -1,0 +1,18 @@
+# ===== 隐私数据：绝不上传 =====
+wxwork_data/
+wiki/
+# 词典从本地聊天语料生成，含个人高频词，不属于仓库
+tools/cjk_vocab.json
+# 本机启动脚本（含本机绝对路径），仅本地使用
+start_server.cmd
+
+# ===== 本地运行产物 =====
+*.log
+*.pyc
+__pycache__/
+
+# ===== 本地测试二进制（>84MB，且与仓库无关） =====
+tools/wechat_test/
+
+# ===== 无许可证的算法参考项目（仅本地参考，不分发源码） =====
+vendors/wxwork-decrypt/

@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools>=68.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "wecom-reader"
+version = "0.1.0"
+description = "Agent-reusable tool for reading WeCom (企业微信) local chat history"
+requires-python = ">=3.10"
+dependencies = [
+    "pycryptodomex>=3.20",
+    "click>=8.0",
+]
+
+[project.optional-dependencies]
+mcp = ["mcp>=1.0"]
+rich = ["rich>=13.0"]
+all = ["mcp>=1.0", "rich>=13.0"]
+
+[project.scripts]
+wecom-reader = "wecom_reader.cli:main"
+
+[tool.setuptools.packages.find]
+include = ["wecom_reader*"]
